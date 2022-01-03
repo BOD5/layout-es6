@@ -1,0 +1,54 @@
+@use './index.scss';
+
+.form {
+  position: relative;
+  width: 403px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  background-color: white;
+  h1 {
+    font-size: 23px;
+    margin: 16px 0px 44px;
+    &.no-margin{
+      margin-bottom: 0px;
+
+    }
+  }
+  custom-input {
+    width: 310px;
+    &+custom-input{
+      margin-top: 16px;
+    }
+  }
+  a {
+    margin-left: .25em;
+    line-height: 20px;
+    &:visited, &:link {
+      color: black;
+    }
+  }
+  &__additional {
+    width: 310px;
+    margin: 16px 0px 0px;
+    display: flex;
+    justify-content: space-between;    
+    &--inline {
+      justify-content: start;
+    }
+    &--top{
+      margin: 8px 0px 16px;
+      display: flex;
+      * {
+        margin: 0px;
+      }
+    }
+  }
+  button {
+    margin-bottom: 32px;
+  }
+}

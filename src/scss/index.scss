@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+//mixins
+@mixin stext($ff, $fs, $fw) {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin hover($param, $color) {
+  transition: .3s;
+  &:hover {
+    #{$param}: darken($color, 5);
+  }
+}
+
+// fonts
+$fontFamily: 'Montserrat';
+$fontStandart: 14px;
+$fontSmall: 12px;
+$fontBig: 16px;
+$weightRegular: 500;
+$weightStrong: 700;
+
+$mainColor: black;
+
+// colors
+$colorYelow: #FF9501;
+$colorBlue: #1890FF;
+$colorGray: #F1F1F1;
+$colorYelow2: #FA8C16;
+
+//global styles
+* {
+  font-family: $fontFamily;
+  font-size: $fontStandart;
+}
+
+button {
+  margin: 24px 0px;
+  background-color: $colorYelow;
+  padding: 19.5px 24px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  @include hover(background-color, $colorYelow);
+}
+
+.close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  padding: 0px;
+  margin: 0px;
+  top: 19.5px;
+  right: 19.5px;
+  background-color: initial;
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 12.2L15.05 16.25L16.25 15.05L12.2 11L16.25 6.95L15.05 5.75L11 9.8L6.95 5.75L5.75 6.95L9.8 11L5.75 15.05L6.95 16.25L11 12.2Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.5 11C0.5 5.15 5.15 0.5 11 0.5C16.85 0.5 21.5 5.15 21.5 11C21.5 16.85 16.85 21.5 11 21.5C5.15 21.5 0.5 16.85 0.5 11ZM2 11C2 15.95 6.05 20 11 20C15.95 20 20 15.95 20 11C20 6.05 15.95 2 11 2C6.05 2 2 6.05 2 11Z' fill='black'/%3E%3C/svg%3E%0A");
+  opacity: .3;
+  &:hover{
+    background-color: initial;
+    opacity: .9;
+  }
+}
+
+.error {
+  color: red;
+}
+
+.hiden {
+  display: none;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  card-content {
+    margin-bottom: 25px;
+  }
+}

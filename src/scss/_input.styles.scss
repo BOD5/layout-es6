@@ -1,0 +1,54 @@
+@use './index.scss';
+
+.error-msg {
+  margin: 8px 16px 0px;
+  font-size: 12px;
+}
+
+.control {
+  max-width: 310px;
+  position: relative;
+  background: rgba(#F6F6F6, 1);
+  border-radius: 4px;
+  padding: 19.5px 16px;
+  box-sizing: border-box;
+  input {
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    background: initial;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  label {
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 19.5px;
+    font-size: 14px;
+    transition: .3s;
+  }
+  input:valid~label,
+  input:focus~label {
+    top: 3px;
+    left: 16px;
+    font-size: 11px;
+  }
+  button {
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: initial;
+    cursor: pointer;
+    svg{
+      fill: #c4c4c4;
+    }
+  }
+}

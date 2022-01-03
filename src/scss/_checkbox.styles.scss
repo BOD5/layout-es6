@@ -1,0 +1,32 @@
+.custom-checkbox {
+  position: absolute;
+  // z-index: -1;
+  opacity: 0;
+
+  &+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-size: 14px;
+    line-height: 20px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid #adb5bd;
+      border-radius: 4px;
+      margin-right: 8px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+  }
+  &:checked+label::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.3333 1.33335L4.67649 6.9902L1.34326 3.65681' stroke='%23008D36' stroke-width='2.07631'/%3E%3C/svg%3E");
+  }
+}
